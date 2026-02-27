@@ -1,0 +1,368 @@
+:root {
+    /* LUNA Palette */
+    --primary: #54ACBF;
+    --secondary: #26658C;
+    --accent: #A7EBF2;
+    --darker: #011C40;
+    --dark: #023859;
+    --surface: #032d4a;
+    --text-comfort: rgba(248, 250, 252, 0.9);
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    background-color: var(--darker);
+    color: var(--text-comfort);
+}
+
+.font-display {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.text-highlight {
+    color: #f8fafc;
+}
+
+/* Mesh Gradient Background for Hero/Sections */
+.mesh-bg {
+    background-color: var(--darker);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(84, 172, 191, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(38, 101, 140, 0.2) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(84, 172, 191, 0.1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(38, 101, 140, 0.15) 0px, transparent 50%);
+}
+
+/* --- Subtle Luxury Refinements --- */
+
+/* Professional Elevation - Lighter shadows, less lift */
+.elevated-3d {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(248, 250, 252, 0.05);
+}
+
+.elevated-3d:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 20px -5px rgba(0, 0, 0, 0.2),
+        0 6px 10px -5px rgba(0, 0, 0, 0.1);
+    border-color: rgba(44, 83, 100, 0.2);
+}
+
+/* Elegant Timbul (Embossed) - Soft & Clean Depth */
+.timbul {
+    background: linear-gradient(145deg, var(--dark), var(--darker));
+    border: 1px solid rgba(248, 250, 252, 0.05);
+    box-shadow:
+        4px 4px 10px rgba(0, 0, 0, 0.3),
+        -2px -2px 8px rgba(255, 255, 255, 0.005);
+}
+
+/* --- Button Refinements --- */
+.btn-elevated {
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn-elevated:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(84, 172, 191, 0.25);
+}
+
+.btn-elevated:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* --- End Subtle Refinements --- */
+
+/* Gradient Animations */
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.gradient-animate {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+.float-animation-delay {
+    animation: float 6s ease-in-out 2s infinite;
+}
+
+/* Balanced Glow Effect */
+.glow-effect {
+    box-shadow: 0 0 15px rgba(84, 172, 191, 0.1);
+    transition: all 0.4s ease;
+}
+
+.glow-effect:hover {
+    box-shadow: 0 0 40px rgba(84, 172, 191, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Service Card with Clean Depth */
+.service-card {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(2, 56, 89, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(248, 250, 252, 0.06);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(84, 172, 191, 0.2);
+    background: rgba(2, 56, 89, 0.35);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Refined Text Gradient */
+.text-gradient {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 50%, #f8fafc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Crystal Navbar Effect */
+.glass-nav {
+    background: rgba(1, 28, 64, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(248, 250, 252, 0.04);
+    transition: all 0.4s ease;
+}
+
+.glass-nav.shadow-lg {
+    background: rgba(1, 28, 64, 0.9);
+    border-bottom-color: rgba(84, 172, 191, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Selection & Scrollbar */
+::selection {
+    background: rgba(84, 172, 191, 0.3);
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--surface);
+    border-radius: 10px;
+    border: 3px solid var(--darker);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+/* Reveal Baseline */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Chatbot Styles --- */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(84, 172, 191, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(84, 172, 191, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(84, 172, 191, 0);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+#chatbot-window.open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(84, 172, 191, 0.3);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(84, 172, 191, 0.5);
+}
+
+/* Chat Bubbles */
+.message-user {
+    background: var(--secondary) !important;
+    color: white !important;
+    border-top-right-radius: 0 !important;
+    align-self: flex-end;
+}
+
+.package-btn {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.package-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(84, 172, 191, 0.3);
+}
+
+/* --- Experience Card Refinements --- */
+#experience .service-card {
+    border-left: 4px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#experience .service-card:hover {
+    border-left-color: var(--primary);
+    /* Highlight accent on hover */
+    background: rgba(2, 56, 89, 0.45);
+}
+
+/* --- Social Icon Embossed (Timbul) --- */
+.social-icon {
+    position: relative;
+    background: linear-gradient(145deg, var(--dark), var(--darker)) !important;
+    border: 1px solid rgba(248, 250, 252, 0.08) !important;
+    box-shadow:
+        5px 5px 12px rgba(0, 0, 0, 0.6),
+        -3px -3px 12px rgba(255, 255, 255, 0.015) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    color: #94a3b8 !important;
+    /* Gray-400 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon:hover {
+    transform: translateY(-4px) scale(1.05) !important;
+    color: #ffffff !important;
+    box-shadow:
+        8px 8px 18px rgba(0, 0, 0, 0.7),
+        -3px -3px 15px rgba(255, 255, 255, 0.02) !important;
+}
+
+/* Hover Accent Backgrounds */
+.social-icon.hover-primary:hover {
+    background: var(--primary) !important;
+}
+
+.social-icon.hover-blue:hover {
+    background: #2563eb !important;
+}
+
+.social-icon.hover-insta:hover {
+    background: linear-gradient(to bottom right, #833ab4, #fd1d1d, #fcb045) !important;
+}
+
+.social-icon.hover-black:hover {
+    background: #000000 !important;
+}
+
+.social-icon.hover-green:hover {
+    background: #22c55e !important;
+}
+
+.social-icon.hover-teal:hover {
+    background: #14b8a6 !important;
+}
+
+/* --- Tech Logo Cards --- */
+.tech-card {
+    background: rgba(2, 56, 89, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(167, 235, 242, 0.05) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tech-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(84, 172, 191, 0.3);
+    border-color: rgba(84, 172, 191, 0.4) !important;
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(84, 172, 191, 0.2);
+}
+
+.tech-card i {
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+}
+
+.tech-card:hover i {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px currentColor);
+}
+
+.tech-card span {
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover span {
+    color: #ffffff !important;
+    letter-spacing: 0.1em;
+}
